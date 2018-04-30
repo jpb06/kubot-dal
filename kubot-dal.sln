@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "kubot-dal", "kubot-dal.njsproj", "{09CF3C54-5998-47AF-8C82-D5ECEED2DFB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09CF3C54-5998-47AF-8C82-D5ECEED2DFB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09CF3C54-5998-47AF-8C82-D5ECEED2DFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09CF3C54-5998-47AF-8C82-D5ECEED2DFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09CF3C54-5998-47AF-8C82-D5ECEED2DFB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC58B61A-B72D-43DE-B08B-9C24BF768496}
+	EndGlobalSection
+EndGlobal
