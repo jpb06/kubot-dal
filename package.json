@@ -1,6 +1,6 @@
 {
   "name": "kubot-dal",
-  "version": "1.1.6",
+  "version": "1.1.42",
   "description": "kubot-dal",
   "main": "js/index.js",
   "types": "typings/index.d.ts",
@@ -10,6 +10,7 @@
   "devDependencies": {
     "@types/mongodb": "^3.0.15",
     "@types/node": "^6.0.87",
+    "gulp": "^3.9.1",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
