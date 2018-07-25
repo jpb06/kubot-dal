@@ -23,3 +23,4 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.6 : Adding a configuration component to manage mongodb instance url and targeted database.
 *  1.1.7 : Namespace PersistedTypes renamed to Types.
 *  1.1.42 : Derped version; Will have to make it expand from v1.1.42 from now on.
+*  1.1.43 : Adding command prefix to guild configuration type.
