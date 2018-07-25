@@ -39,7 +39,8 @@ export abstract class PersistedTypesValidation {
             typeof obj.adminChannelName === "string" &&
             typeof obj.emergencyChannelName === "string" &&
             typeof obj.acknowledged === "string" &&
-            typeof obj.activityNoticeMinPlayers === "number"
+            typeof obj.activityNoticeMinPlayers === "number" &&
+            typeof obj.commandsPrefix === "string"
         );
     }
 
