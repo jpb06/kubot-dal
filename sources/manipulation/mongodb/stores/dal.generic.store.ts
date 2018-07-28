@@ -17,7 +17,7 @@ export abstract class GenericStore {
             let db = client.db(DalConfiguration.database);
             let collection = db.collection(collectionName);
 
-            await collection.findOneAndUpdate(term, value, { upsert: true });
+            await collection.findOneAndUpdate(term, { $set: value }, { upsert: true });
 
             return true;
         } finally {
