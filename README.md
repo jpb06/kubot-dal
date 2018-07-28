@@ -25,3 +25,4 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.42 : Derped version; Will have to make it expand from v1.1.42 from now on.
 *  1.1.43 : Adding command prefix to guild configuration type.
 *  1.1.44 : Updating mongodb and using new parser for connect.
+*  1.1.45 : Fixing GenericStore.createOrUpdate (behavior change for findOneAndUpdate).
