@@ -11,13 +11,13 @@ export abstract class GenericStore {
     ): Promise<boolean> {
         DalConfiguration.Verify();
 
-        const client = await MongoClient.connect(DalConfiguration.url);
+        const client = await MongoClient.connect(DalConfiguration.url, { useNewUrlParser: true });
         
         try {
             let db = client.db(DalConfiguration.database);
             let collection = db.collection(collectionName);
 
-            await collection.findOneAndUpdate(term, value, { upsert: true });
+            await collection.findOneAndUpdate(term, { $set: value }, { upsert: true });
 
             return true;
         } finally {
@@ -32,7 +32,7 @@ export abstract class GenericStore {
     ): Promise<boolean> {
         DalConfiguration.Verify();
 
-        const client = await MongoClient.connect(DalConfiguration.url);
+        const client = await MongoClient.connect(DalConfiguration.url, { useNewUrlParser: true });
         
         try {
             let db = client.db(DalConfiguration.database);
@@ -59,7 +59,7 @@ export abstract class GenericStore {
     ): Promise<Array<object>> {
         DalConfiguration.Verify();
 
-        const client = await MongoClient.connect(DalConfiguration.url);
+        const client = await MongoClient.connect(DalConfiguration.url, { useNewUrlParser: true });
         
         try {
             let db = client.db(DalConfiguration.database);
@@ -80,7 +80,7 @@ export abstract class GenericStore {
     ): Promise<Array<object>> {
         DalConfiguration.Verify();
 
-        const client = await MongoClient.connect(DalConfiguration.url);
+        const client = await MongoClient.connect(DalConfiguration.url, { useNewUrlParser: true });
         
         try {
             let db = client.db(DalConfiguration.database);
@@ -103,7 +103,7 @@ export abstract class GenericStore {
     ): Promise<boolean> {
         DalConfiguration.Verify();
 
-        const client = await MongoClient.connect(DalConfiguration.url);
+        const client = await MongoClient.connect(DalConfiguration.url, { useNewUrlParser: true });
         
         try {
             let db = client.db(DalConfiguration.database);
