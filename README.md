@@ -26,3 +26,4 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.43 : Adding command prefix to guild configuration type.
 *  1.1.44 : Updating mongodb and using new parser for connect.
 *  1.1.45 : Fixing GenericStore.createOrUpdate (behavior change for findOneAndUpdate).
+*  1.1.46 : Adding activityNoticeMessages property to GuildConfiguration type.
