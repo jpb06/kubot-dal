@@ -30,18 +30,27 @@ export abstract class PersistedTypesValidation {
        ---------------------------------------------------------------------------------------------------------------*/
 
     public static IsGuildConfiguration(obj: any): obj is PersistedTypes.GuildConfiguration {
-        return (
-            typeof obj.guildId === "string" &&
-            typeof obj.messagesImage === "string" &&
-            typeof obj.messagesFooterName === "string" &&
-            typeof obj.scanMainRegionName === "string" &&
-            typeof obj.mainChannelName === "string" &&
-            typeof obj.adminChannelName === "string" &&
-            typeof obj.emergencyChannelName === "string" &&
-            typeof obj.acknowledged === "string" &&
-            typeof obj.activityNoticeMinPlayers === "number" &&
-            typeof obj.commandsPrefix === "string"
-        );
+        if (
+            typeof obj.guildId !== "string" ||
+            typeof obj.messagesImage !== "string" ||
+            typeof obj.messagesFooterName !== "string" ||
+            typeof obj.scanMainRegionName !== "string" ||
+            typeof obj.mainChannelName !== "string" ||
+            typeof obj.adminChannelName !== "string" ||
+            typeof obj.emergencyChannelName !== "string" ||
+            typeof obj.acknowledged !== "string" ||
+            typeof obj.activityNoticeMinPlayers !== "number" ||
+            typeof obj.commandsPrefix !== "string" ||
+            !Array.isArray(obj.activityNoticeMessages)
+        ) {
+            return false;
+        }
+
+        for (let i = 0; i < obj.activityNoticeMessages.length; i++) {
+            if (typeof obj.activityNoticeMessages[i] !== "string") return false;
+        }
+
+        return true;
     }
 
     /* ---------------------------------------------------------------------------------------------------------------
