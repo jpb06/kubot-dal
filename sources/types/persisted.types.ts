@@ -25,6 +25,7 @@ export class GuildConfiguration {
     emergencyChannelName: string;
     acknowledged: string;
     activityNoticeMinPlayers: number;
+    activityNoticeMessages: Array<string>;
     commandsPrefix: string;
 }
 
