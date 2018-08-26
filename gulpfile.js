@@ -1,6 +1,5 @@
 ﻿/// <binding BeforeBuild='clean' AfterBuild='generatePackage, moveReadme' Clean='clean' />
 const gulp = require('gulp');
-const gutil = require('gulp-util');
 const rimraf = require('rimraf');
 const fs = require('fs');
 
