@@ -118,7 +118,8 @@ export abstract class PersistedTypesValidation {
         if (typeof obj.guildId !== "string" ||
             typeof obj.name !== "string" ||
             typeof obj.alwaysDisplay !== "boolean" ||
-            !Array.isArray(obj.systems)) {
+            !Array.isArray(obj.systems) ||
+            typeof obj.showPlayers !== "boolean") {
             return false;
         }
 

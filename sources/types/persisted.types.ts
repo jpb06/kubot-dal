@@ -75,4 +75,5 @@ export class WatchedRegion {
     name: string;
     systems: Array<string>;
     alwaysDisplay: boolean;
+    showPlayers: boolean;
 }
