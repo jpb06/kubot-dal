@@ -129,4 +129,17 @@ export abstract class PersistedTypesValidation {
 
         return true;
     }
+
+    /* ---------------------------------------------------------------------------------------------------------------
+       Session (Configuration Website)
+       ---------------------------------------------------------------------------------------------------------------*/
+
+    public static IsSession(obj: any): obj is PersistedTypes.Session {
+        if (typeof obj.login !== "string" ||
+            typeof obj.password !== "string" ||
+            typeof obj.token !== "string")
+            return false;
+
+        return true;
+    }
 }
