@@ -21,14 +21,14 @@ export abstract class SessionStore {
 
     public static async get(
         guildId: string
-    ): Promise<Array<Session>> {
+    ): Promise<Session> {
         let result = await GenericStore.getBy(
             this.storeName,
             { guildId: guildId },
             {}
         ) as Array<Session>;
 
-        return result;
+        return result[0];
     }
 
 }
