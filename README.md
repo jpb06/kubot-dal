@@ -28,3 +28,7 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.45 : Fixing GenericStore.createOrUpdate (behavior change for findOneAndUpdate).
 *  1.1.46 : Adding activityNoticeMessages property to the GuildConfiguration type.
 *  1.1.47: Adding showPlayers to the WatchedRegion type.
+*  1.1.48: Adding storate related with configuration website (Sessions).
+*  1.1.49: Adding sessions manipulation class to Manipulation exports.
+*  1.1.50: Publish error.
+*  1.1.51: Sessions store get should return only one session.
