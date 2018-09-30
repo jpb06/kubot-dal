@@ -52,6 +52,7 @@
     <Folder Include="sources\manipulation\mongodb\stores\" />
     <Folder Include="sources\manipulation\mongodb\stores\business\" />
     <Folder Include="sources\manipulation\mongodb\stores\fetched\" />
+    <Folder Include="sources\manipulation\mongodb\stores\website\" />
     <Folder Include="sources\manipulation\mongodb\stores\watchlists\" />
     <Folder Include="sources\manipulation\" />
     <Folder Include="sources\types\" />
@@ -72,6 +73,9 @@
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\watchlists\faction.watch.store.ts" />
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\watchlists\player.watch.store.ts" />
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\watchlists\region.watch.store.ts" />
+    <TypeScriptCompile Include="sources\manipulation\mongodb\stores\website\sessions.store.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="sources\types\persisted.types.ts" />
     <TypeScriptCompile Include="sources\types\persisted.types.validation.ts" />
     <TypeScriptCompile Include="sources\types.export.ts">

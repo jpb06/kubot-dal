@@ -77,3 +77,12 @@ export class WatchedRegion {
     alwaysDisplay: boolean;
     showPlayers: boolean;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------
+   Session (Configuration Website)
+   ---------------------------------------------------------------------------------------------------------------*/
+export class Session {
+    login: string;
+    password: string;
+    token: string;
+}
