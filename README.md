@@ -32,3 +32,4 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.49: Adding sessions manipulation class to Manipulation exports.
 *  1.1.50: Publish error.
 *  1.1.51: Sessions store get should return only one session.
+*  1.1.52: Fixing issue in sessions store (login, not guildId).
