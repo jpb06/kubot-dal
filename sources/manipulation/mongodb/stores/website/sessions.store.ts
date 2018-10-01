@@ -24,7 +24,7 @@ export abstract class SessionStore {
     ): Promise<Session> {
         let result = await GenericStore.getBy(
             this.storeName,
-            { guildId: guildId },
+            { login: guildId },
             {}
         ) as Array<Session>;
 
