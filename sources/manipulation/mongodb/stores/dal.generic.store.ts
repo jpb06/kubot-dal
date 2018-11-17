@@ -17,9 +17,11 @@ export abstract class GenericStore {
             let db = client.db(DalConfiguration.database);
             let collection = db.collection(collectionName);
 
-            await collection.findOneAndUpdate(term, { $set: value }, { upsert: true });
-
-            return true;
+            let result = await collection.findOneAndUpdate(term, { $set: value }, { upsert: true });
+            if (result.ok === 1)
+                return true;
+            else
+                return false;
         } finally {
             client.close();
         }
@@ -38,10 +40,15 @@ export abstract class GenericStore {
             let db = client.db(DalConfiguration.database);
             let collection = db.collection(collectionName);
 
-            await collection.deleteMany(term);
-            await collection.insertMany(values);
+            let deleteResult = await collection.deleteMany(term);
+            let insertResult = await collection.insertMany(values);
 
-            return false;
+            if (deleteResult.result.ok === 1 && insertResult.result.ok === 1) {
+                return true;
+            } else {
+                return false;
+            } 
+
         } finally {
             client.close();
         }
