@@ -53,6 +53,7 @@
     <Folder Include="sources\manipulation\mongodb\stores\" />
     <Folder Include="sources\manipulation\mongodb\stores\business\" />
     <Folder Include="sources\manipulation\mongodb\stores\fetched\" />
+    <Folder Include="sources\manipulation\mongodb\stores\static\" />
     <Folder Include="sources\manipulation\mongodb\stores\website\" />
     <Folder Include="sources\manipulation\mongodb\stores\watchlists\" />
     <Folder Include="sources\manipulation\" />
@@ -71,6 +72,9 @@
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\business\last.fetch.store.ts" />
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\dal.generic.store.ts" />
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\fetched\online.players.store.ts" />
+    <TypeScriptCompile Include="sources\manipulation\mongodb\stores\static\star.systems.store.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\watchlists\faction.watch.store.ts" />
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\watchlists\player.watch.store.ts" />
     <TypeScriptCompile Include="sources\manipulation\mongodb\stores\watchlists\region.watch.store.ts" />
