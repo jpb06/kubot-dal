@@ -91,5 +91,8 @@ export class Session {
    Star system
    ---------------------------------------------------------------------------------------------------------------*/
 export class StarSystem {
+    nickName: string;
     name: string;
+    posX: number;
+    posY: number;
 }

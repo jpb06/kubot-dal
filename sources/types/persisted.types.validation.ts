@@ -148,7 +148,10 @@ export abstract class PersistedTypesValidation {
        ---------------------------------------------------------------------------------------------------------------*/
 
     public static IsStarSystem(obj: any): obj is PersistedTypes.Session {
-        if (typeof obj.name !== "string")
+        if (typeof obj.nickName !== "string" ||
+            typeof obj.name !== "string" ||
+            typeof obj.posX !== "number" ||
+            typeof obj.posY !== "number")
             return false;
 
         return true;
