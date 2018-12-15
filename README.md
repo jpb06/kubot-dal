@@ -35,4 +35,5 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.52: Fixing issue in sessions store (login, not guildId).
 *  1.1.53: Fixing some functions in the generic store not returning the operation result.
 *  1.1.54: Adding a store for star systems.
-*  1.1.55: Adding the nickanem, posx and posy properties to the star systems model.
+*  1.1.55: Adding the nickname, posx and posy properties to the star systems model.
+*  1.1.56: Adding roles to users sessions.
