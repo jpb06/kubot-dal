@@ -21,14 +21,29 @@ export abstract class SessionStore {
 
     public static async get(
         guildId: string
-    ): Promise<Session> {
+    ): Promise<Session | null> {
         let result = await GenericStore.getBy(
             this.storeName,
             { login: guildId },
             {}
         ) as Array<Session>;
 
+        if (result.length !== 1) return null;
+
         return result[0];
     }
 
+    public static async getPermissions(
+        login: string
+    ): Promise<string[] | null> {
+        let result = await GenericStore.getBy(
+            this.storeName,
+            { login: login },
+            {}
+        ) as Array<Session>;
+
+        if (result.length !== 1) return null;
+
+        return result[0].roles;
+    }
 }
