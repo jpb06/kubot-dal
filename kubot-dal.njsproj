@@ -57,6 +57,7 @@
     <Folder Include="sources\manipulation\mongodb\stores\website\" />
     <Folder Include="sources\manipulation\mongodb\stores\watchlists\" />
     <Folder Include="sources\manipulation\" />
+    <Folder Include="sources\util\" />
     <Folder Include="sources\types\" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +85,9 @@
     <TypeScriptCompile Include="sources\types\persisted.types.ts" />
     <TypeScriptCompile Include="sources\types\persisted.types.validation.ts" />
     <TypeScriptCompile Include="sources\types.export.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="sources\util\crypto.util.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
   </ItemGroup>
