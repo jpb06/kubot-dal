@@ -84,7 +84,6 @@ export class WatchedRegion {
 export class Session {
     login: string;
     password: string;
-    token: string;
     roles: string[];
 }
 
