@@ -1,6 +1,8 @@
 ﻿import { GenericStore } from './../dal.generic.store';
 import { Session } from './../../../../types/persisted.types';
 
+import * as cryptoUtil from './../../../../util/crypto.util';
+
 export abstract class SessionStore {
     public static storeName = 'sessions';
 
@@ -8,12 +10,13 @@ export abstract class SessionStore {
         guildId: string
     ): Promise<string> {
         let password: string = [...Array(8)].map(i => (~~(Math.random() * 36)).toString(36)).join('');
-        let token: string = [...Array(20)].map(i => (~~(Math.random() * 36)).toString(36)).join('');
+
+        let hash = await cryptoUtil.hash(password);
 
         await GenericStore.createOrUpdate(
             this.storeName,
             { login: guildId },
-            { login: guildId, password: password, token: token }
+            { login: guildId, password: hash }
         );
 
         return password;
