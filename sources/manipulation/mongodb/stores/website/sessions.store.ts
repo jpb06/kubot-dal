@@ -1,4 +1,6 @@
-﻿import { GenericStore } from './../dal.generic.store';
+﻿import * as moment from 'moment';
+
+import { GenericStore } from './../dal.generic.store';
 import { Session } from './../../../../types/persisted.types';
 
 import * as cryptoUtil from './../../../../util/crypto.util';
@@ -16,7 +18,7 @@ export abstract class SessionStore {
         await GenericStore.createOrUpdate(
             this.storeName,
             { login: guildId },
-            { login: guildId, password: hash }
+            { login: guildId, password: hash, dateGenerated: moment().toString() }
         );
 
         return password;

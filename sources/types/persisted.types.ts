@@ -85,6 +85,7 @@ export class Session {
     login: string;
     password: string;
     roles: string[];
+    dateGenerated: string;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------

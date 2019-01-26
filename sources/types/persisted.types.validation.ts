@@ -137,6 +137,7 @@ export abstract class PersistedTypesValidation {
     public static IsSession(obj: any): obj is PersistedTypes.Session {
         if (typeof obj.login !== "string" ||
             typeof obj.password !== "string" ||
+            typeof obj.dateGenerated !== "string" ||
             !Array.isArray(obj.roles))
             return false;
 
