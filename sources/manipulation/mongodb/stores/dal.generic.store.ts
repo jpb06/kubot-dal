@@ -11,7 +11,13 @@ export abstract class GenericStore {
     ): Promise<boolean> {
         DalConfiguration.Verify();
 
-        const client = await MongoClient.connect(DalConfiguration.url, { useNewUrlParser: true });
+        const client = await MongoClient.connect(DalConfiguration.url, {
+            auth: {
+                user: DalConfiguration.username,
+                password: DalConfiguration.password
+            },
+            useNewUrlParser: true
+        });
         
         try {
             let db = client.db(DalConfiguration.database);
