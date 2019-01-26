@@ -40,3 +40,4 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.57: Using bcrypt to hash passwords before storing them. Removing the token property from the session type (useless).
 *  1.1.58: Adding a generation date property to the session type.
 *  1.1.59: Setting generation date on session creation.
+*  1.1.60: About time to handle mongodb simple authentication.
