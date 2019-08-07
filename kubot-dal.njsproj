@@ -7,6 +7,7 @@
     <RootNamespace>kubot-dal</RootNamespace>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <ToolsVersionPromptShown>2.6</ToolsVersionPromptShown>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -40,6 +41,8 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="package-lock.json" />
+    <Content Include="project-apparatus\console.util.js" />
+    <Content Include="project-apparatus\fs.util.js" />
     <Content Include="README.md" />
     <Content Include="tsconfig.json" />
     <Content Include="package.json">
@@ -47,6 +50,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="project-apparatus\" />
     <Folder Include="sources\configuration\" />
     <Folder Include="sources\" />
     <Folder Include="sources\manipulation\mongodb\" />
