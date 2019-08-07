@@ -42,3 +42,4 @@ This is a library containing types to be persisted on a mongodb database and the
 *  1.1.59: Setting generation date on session creation.
 *  1.1.60: About time to handle mongodb simple authentication.
 *  1.1.61: Unifying connection logic.
+*  1.1.62: Improving configuration logic.
