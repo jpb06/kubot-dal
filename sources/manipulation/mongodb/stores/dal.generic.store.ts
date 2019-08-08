@@ -35,7 +35,7 @@ export abstract class GenericStore {
             else
                 return false;
         } finally {
-            client.close();
+            await client.close();
         }
     }
 
@@ -62,7 +62,7 @@ export abstract class GenericStore {
             } 
 
         } finally {
-            client.close();
+            await client.close();
         }
     }
 
@@ -88,7 +88,7 @@ export abstract class GenericStore {
 
             return result;
         } finally {
-            client.close();
+            await client.close();
         }
     }
 
@@ -112,7 +112,7 @@ export abstract class GenericStore {
 
             return result;
         } finally {
-            client.close();
+            await client.close();
         }
     }
 
@@ -132,7 +132,7 @@ export abstract class GenericStore {
 
             return result.deletedCount === 1;
         } finally {
-            client.close();
+            await client.close();
         }
     }
 }
